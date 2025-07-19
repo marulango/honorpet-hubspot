@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Honor Pet</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ <link rel="stylesheet" type="text/css" href="{{ get_asset_url('/precious-cargo/assets/css/theme-dist.css') }}">
+</head>
+<body class="font-sans">
+ <!-- Sticky Header -->
+<header class="bg-white text-sm shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Left: logo -->
+    <div class="text-xl font-heading">
+      <img src="{{ get_asset_url('/precious-cargo/assets/images/logo-horizontal.svg') }}" alt="">
+    </div>
+
+    <!-- Mobile menu button -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-blue" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Right: nav + button (desktop only) -->
+    <div class="hidden md:flex items-center space-x-6">
+      <nav class="flex space-x-6">
+        <a href="#" class="header-links">For Pet Parents</a>
+        <a href="#" class="header-links">For Veterinarians</a>
+        <a href="#" class="header-links">Store</a>
+        <a href="#" class="header-links">About us</a>
+      </nav>
+      <a href="#" class="px-6 py-1 primary-button">Begin Here</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 px-4 pb-4">
+    <nav class="flex flex-col space-y-4 mt-4">
+      <a href="#" class="header-links">For Pet Parents</a>
+      <a href="#" class="header-links">For Veterinarians</a>
+      <a href="#" class="header-links">Store</a>
+      <a href="#" class="header-links">About us</a>
+      <a href="#" class="primary-button w-full text-center">Begin Here</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero -->
+<section class="relative bg-blue-300 bg-cover bg-center h-[80vh] flex items-center justify-center text-white text-center text-shadow-md z-10" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/hero-bg.png') }}');">
+
+  <div class="absolute z-20 sm:hidden md:block md:w-[40vw] md:h-[60%] -bottom-[20%] left-0 bg-no-repeat bg-contain bg-[position:top_left]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/hero-flourish-left.svg') }}');"></div>
+  <div class="absolute z-20 sm:hidden md:block md:w-[40vw] md:h-[70%] -bottom-[25%] right-0 bg-no-repeat bg-contain bg-[position:right_bottom]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/hero-flourish-right.svg') }}');"></div>
+  
+  <div class="bg-black/40 absolute inset-0"></div>
+  <div class="relative z-10 px-4 text-shadow-sm">
+    <h1 class="text-5xl font-heading mb-4 uppercase text-shadow-lg">Goodbyes Matter</h1> 
+    <p class="text-lg mb-6 text-shadow-lg">Compassion and professional care for pets and guardians</p>
+    <a href="#" class="px-6 py-3 text-sm primary-button text-shadow-none">Begin Here</a>
+  </div>
+  <div class="absolute z-10 -bottom-[10px] left-0 w-full h-32 bg-gradient-to-t from-blue to-transparent pointer-events-none"
+  aria-hidden="true"></div>
+</section>
+
+<!-- Services -->
+<section class="bg-blue text-white py-20">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-heading">Services We Offer</h2>
+    <p class="text-base mt-2 mb-12">You've given your pet a lifetime of love. Now, create a farewell that honors your special bond. As your guide, we provide the time, space, and options you need to say goodbye in your own way—all in one place.</p>
+    <div class="grid md:grid-cols-4 gap-8 mt-8">
+      <div class="bg-white text-black p-6 rounded shadow flex flex-col justify-center text-center">
+        <svg class="flex mx-auto text-blue-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm72.77,97a8,8,0,0,1,1.43,8A96,96,0,1,1,95.07,37.8a8,8,0,0,1,10.6,9.06A88.07,88.07,0,0,0,209.14,150.33,8,8,0,0,1,216.77,153Zm-19.39,14.88c-1.79.09-3.59.14-5.38.14A104.11,104.11,0,0,1,88,64c0-1.79,0-3.59.14-5.38A80,80,0,1,0,197.38,167.86Z"></path></svg>
+        <h3 class="font-semibold mb-2">Euthanasia</h3>
+        <p class="text-sm mb-4">Your pet deserves a gentle goodbye. In our calm and home-like setting, our caring and experienced team will support you and your pet through a dignified transition, providing the time and space you need.</p>
+        <a href="#" class="mx-auto text-blue uppercase tracking-wider text-sm font-bold mt-auto inline-flex justify-center tertiary-button w-max items-center space-x-4 tertiary-button w-max items-center space-x-4"><svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#currentColor" viewBox="0 0 256 256"><path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path></svg>Learn More</a>
+      </div>
+      <div class="bg-white text-black p-6 rounded shadow flex flex-col justify-center text-center">
+        <svg class="flex mx-auto text-blue-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M222.16,177.25a8,8,0,0,1-1,11.25c-17.36,14.39-32.86,19.5-47,19.5-18.58,0-34.82-8.82-49.93-17-25.35-13.76-47.24-25.64-79.07.74a8,8,0,1,1-10.22-12.31c40.17-33.28,70.32-16.92,96.93-2.48,25.35,13.75,47.24,25.63,79.07-.74A8,8,0,0,1,222.16,177.25Zm-11.27-57c-31.83,26.38-53.72,14.5-79.07.74-26.61-14.43-56.76-30.79-96.93,2.49a8,8,0,0,0,10.22,12.31c31.83-26.38,53.72-14.5,79.07-.74,15.11,8.19,31.35,17,49.93,17,14.14,0,29.64-5.11,47-19.5a8,8,0,1,0-10.22-12.31ZM45.11,79.8c31.83-26.37,53.72-14.49,79.07-.74,15.11,8.2,31.35,17,49.93,17,14.14,0,29.64-5.12,47-19.5a8,8,0,1,0-10.22-12.31c-31.83,26.38-53.72,14.5-79.07.74C105.21,50.58,75.06,34.22,34.89,67.5A8,8,0,1,0,45.11,79.8Z"></path></svg>
+        <h3 class="font-semibold mb-2">Water Cremation</h3>
+        <p class="text-sm mb-4">Choose an eco-friendly farewell that honors your pet and our planet. This gentle process uses water and minerals, producing 90% less carbon emissions than traditional methods. Choosing this option shows your commitment to a sustainable future.</p>
+        <a href="#" class="mx-auto text-blue uppercase tracking-wider text-sm font-bold mt-auto inline-flex justify-center tertiary-button w-max items-center space-x-4"><svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path></svg>Learn More</a>
+      </div>
+      
+      <div class="bg-white text-black p-6 rounded shadow flex flex-col">
+        <svg class="text-blue-600 flex mx-auto" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-64-56a16,16,0,1,1-16-16A16,16,0,0,1,144,152Z"></path></svg>
+        <h3 class="font-semibold mb-2">Pre-Planning</h3>
+        <p class="text-sm mb-4">Gain peace of mind with thoughtful preparation. Whether planning ahead or needing immediate support, we'll guide you through quality of life considerations and end-of-life decisions that align with your wishes for your best friend.</p>
+        <a href="#" class="mx-auto text-blue uppercase tracking-wider text-sm font-bold mt-auto inline-flex justify-center tertiary-button w-max items-center space-x-4"><svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path></svg>Learn More</a>
+      </div>
+      <div class="bg-white text-black p-6 rounded shadow flex flex-col">
+        <svg class="text-blue-600 flex mx-auto" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM119.46,48A31.15,31.15,0,0,1,148.6,67a8,8,0,0,0,14.8,0,31.15,31.15,0,0,1,29.14-19C209.59,48,224,62.65,224,80c0,19.51-15.79,41.58-45.66,63.9l-11.09,2.55A28,28,0,0,0,140,112H100.68C92.05,100.36,88,90.12,88,80,88,62.65,102.41,48,119.46,48ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"></path></svg>
+        <h3 class="font-semibold mb-2">Pet Loss Support</h3>
+        <p class="text-sm mb-4">Your grief journey is personal. Connect with our licensed social worker through no-cost virtual support groups, one-on-one sessions, or creative workshops focused on remembrance, healing, and community.</p>
+        <a href="#" class="mx-auto text-blue uppercase tracking-wider text-sm font-bold mt-auto inline-flex justify-center tertiary-button w-max items-center space-x-4"><svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M221.28,34.75a64,64,0,0,0-90.49,0L60.69,104A15.9,15.9,0,0,0,56,115.31v73.38L26.34,218.34a8,8,0,0,0,11.32,11.32L67.32,200H140.7A15.92,15.92,0,0,0,152,195.32l0,0,69.23-70A64,64,0,0,0,221.28,34.75ZM142.07,46.06A48,48,0,0,1,211.79,112H155.33l34.35-34.34a8,8,0,0,0-11.32-11.32L120,124.69V67.87ZM72,115.35l32-31.67v57l-32,32ZM140.7,184H83.32l56-56h56.74Z"></path></svg>Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Round Image Section: Your Love Deserves Honor -->
+<section class="bg-taupe text-blue py-20 relative overflow-hidden">
+  <div class="absolute sm:hidden md:block md:w-[40vw] md:h-[80%] top-0 left-0 bg-no-repeat bg-contain bg-[position:top_left]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/honor-flourish-left.svg') }}');"></div>
+  <div class="absolute sm:hidden md:block md:w-[40vw] md:h-[80%] bottom-0 right-0 bg-no-repeat bg-contain bg-[position:right_bottom]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/honor-flourish-right.svg') }}');"></div>
+
+  <div class="max-w-xl mx-auto px-4 grid grid-cols-1 gap-8 text-center">
+    <h2 class="text-3xl font-heading mb-6">Your love<br/>deserves honor</h2>
+    <div class="flex flex-col md:flex-row items-center gap-6 text-left">
+      <img src="{{ get_asset_url('/precious-cargo/assets/images/honor-01.png') }}" class="w-60" />
+      <div class="flex-1">
+        <h4 class="font-semibold">Your Goodbye, Your Way</h4>
+        <p class="text-sm mt-2 mt-2">
+          Your story with your pet is one-of-a-kind, and we're your partner in creating a farewell that honors your special bond. From peaceful transitions to meaningful memorials, we guide you through options you might not know existed. You'll have the choices and support you need to make these moments truly your own.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row-reverse items-center gap-6 text-left">
+      <img src="{{ get_asset_url('/precious-cargo/assets/images/honor-02.png') }}" class="w-60" />
+      <div class="flex-1">
+        <h4 class="font-semibold">Always Connected</h4>
+        <p class="text-sm mt-2 mt-2">
+          
+From first hello to final farewell, your pet never leaves our care. With all services under one roof and our team personally guiding you every step of the way, you'll always know who's caring for your pet and what comes next. No handoffs, no uncertainty—just the peace of mind of consistent, compassionate care.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center gap-6 text-left">
+      <img src="{{ get_asset_url('/precious-cargo/assets/images/honor-03.png') }}" class="w-60" />
+      <div class="flex-1">
+        <h4 class="font-semibold">Gentle on Hearts, Gentle on Earth</h4>
+        <p class="text-sm mt-2 mt-2">
+          Caring for the world your pet loved is part of honoring their memory. Our commitment to sustainability extends beyond water cremation to every aspect of our care. From our Comfort Center built with reclaimed materials to our all-electric fleet and eco-conscious memorial options, we've designed an experience where honoring your pet can also honor the planet.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About / In Good Hands -->
+<section class="bg-blue-300 text-blue py-20">
+  <div class="max-w-3xl mx-auto justify-center flex flex-col md:flex-row items-center gap-8 text-left">
+    <div class="text-center md:w-1/3">
+      <img src="{{ get_asset_url('/precious-cargo/assets/images/shea.png') }}" class="mx-auto mb-4" />
+      <h4 class="text-base font-semibold">Dr. Shea Cox</h4>
+      <p class="text-sm">Chief Veterinary Officer & Co-Founder</p>
+    </div>
+    <div class="flex-1 text-center md:text-left md:w-2/3">
+      <h2 class="text-3xl font-heading">In good hands</h2>
+      <p class="mt-6 leading-relaxed">Our Chief Veterinary Officer, Dr. Shea Cox, is a pioneer in veterinary hospice and end-of-life care. With over a decade dedicated to advancing and innovating how we say goodbye, Dr. Cox brings unmatched expertise, compassion, and understanding to every interaction. Trust in her guidance and commitment to helping you and your pet navigate this transition with confidence and care.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="relative bg-blue-200 text-blue py-24 md:px-12">
+  <div class="mmax-w-6xl mx-auto text-center">
+    <h3 class="uppercase tracking-wider text-sm mb-2">Experience</h3>
+    <h2 class="text-3xl font-heading mb-6">The Honor Pet<span class="line-break-no-pause"></span>difference</h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide -->
+        <div class="swiper-slide px-4">
+          <div class="bg-taupe rounded-md p-8 shadow-md h-full flex flex-col justify-between bg-[url('/assets/images/testimonial-cardbg.svg')] top-0 left-0 bg-no-repeat bg-contain bg-[position:bottom_right]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/testimonial-cardbg.svg') }}');">
+            <p class="text-lg mb-4 leading-relaxed">
+              The team was so kind and professional, guiding us through every step with care.
+            </p>
+            <p class="text-sm uppercase tracking-wide text-blue">- Reviewer Name</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide px-4">
+          <div class="bg-taupe rounded-md p-8 shadow-md h-full flex flex-col justify-between bg-[url('/assets/images/testimonial-cardbg.svg')] top-0 left-0 bg-no-repeat bg-contain bg-[position:bottom_right]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/testimonial-cardbg.svg') }}');">
+            <p class="text-lg mb-4 leading-relaxed">
+              The team was so kind and professional, guiding us through every step with care.
+            </p>
+            <p class="text-sm uppercase tracking-wide text-blue">- Reviewer Name</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide px-4">
+          <div class="bg-taupe rounded-md p-8 shadow-md h-full flex flex-col justify-between bg-[url('/assets/images/testimonial-cardbg.svg')] top-0 left-0 bg-no-repeat bg-contain bg-[position:bottom_right]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/testimonial-cardbg.svg') }}');">
+            <p class="text-lg mb-4 leading-relaxed">
+              The team was so kind and professional, guiding us through every step with care.
+            </p>
+            <p class="text-sm uppercase tracking-wide text-blue">- Reviewer Name</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide px-4">
+          <div class="bg-taupe rounded-md p-8 shadow-md h-full flex flex-col justify-between bg-[url('/assets/images/testimonial-cardbg.svg')] top-0 left-0 bg-no-repeat bg-contain bg-[position:bottom_right]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/testimonial-cardbg.svg') }}');">
+            <p class="text-lg mb-4 leading-relaxed">
+              The team was so kind and professional, guiding us through every step with care.
+            </p>
+            <p class="text-sm uppercase tracking-wide text-blue">- Reviewer Name</p>
+          </div>
+        </div>
+
+        <!-- Repeat slides as needed -->
+        <!-- ... -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-12"></div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-prev custom-prev text-blue">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+      </div>
+      <div class="swiper-button-next custom-next text-blue">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="absolute z-10 sm:hidden md:block md:w-[100%] md:h-[408px] bg-[url('/assets/images/pricing-flourish-right.svg')] -top-[15%] right-0 bg-no-repeat bg-contain bg-[position:right_bottom]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/pricing-flourish-right.svg') }}');"></div>
+  <div class="absolute z-10 sm:hidden md:block md:w-[100%] md:h-[612px] bg-[url('/assets/images/pricing-flourish-left.svg')] -bottom-[20%] left-0 bg-no-repeat bg-contain bg-[position:top_left]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/pricing-flourish-left.svg') }}');"></div>
+  -->
+</section>
+
+<!-- FAQ Accordion -->
+<section class="relative bg-taupe text-blue py-20">
+
+  <div class="relative max-w-4xl mx-auto px-4 justify-center text-center z-20">
+    <h2 class="text-3xl font-heading mb-6 text-center">FAQs<span class="line-break-no-pause"></span><span class="uppercase text-lg tracking-wider">for Pet Parents</span></h2>
+    <p class="mb-4">If you have additional questions, feel free to reach out to us for more information.</p>
+    <div class="space-y-4 text-left mt-4">
+      <!-- Repeat for each FAQ -->
+      <details class="bg-moss-300 rounded-md p-4 group">
+        <summary class="flex justify-between items-center cursor-pointer font-bold list-none">
+          What is water cremation?
+          <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+        </summary>
+        <p class="mt-2 text-base text-black">Answer content goes here</p>
+      </details>
+    </div>
+    <div class="text-center mt-10">
+      <a href="#" class="px-6 py-3 secondary-button text-sm">Schedule a Service</a>
+    </div>
+  </div>
+
+  <div class="absolute z-10 sm:hidden md:block md:w-[20vw] md:h-[288px] bg-[url('/assets/images/faq-flourish-left.svg')] top-0 left-0 bg-no-repeat bg-contain bg-[position:top_left]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/faq-flourish-left.svg') }}');"></div>
+  <div class="absolute z-10 sm:hidden md:block md:w-[30vw] md:h-[288px] bg-[url('/assets/images/faq-flourish-right.svg')] bottom-0 right-0 bg-no-repeat bg-contain bg-[position:right_bottom]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/faq-flourish-right.svg') }}');"></div>
+</section>
+
+<!-- Resources -->
+<section class="bg-blue-300 py-20">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-heading mb-6 text-center">Resources</h2>
+    <div class="text-center mt-10">
+      <p>Learn how to navigate a pet’s final chapter with clarity, compassion, and genuine choice</p>
+      <a href="#" class="px-6 py-3 text-link hover:underline underline-offset-4 md-4">Visit our Resource Center →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-blue text-blue-200 py-24 bg-blue text-blue-200 text-center bg-[url('/assets/images/footer-bg.png')] bg-no-repeat bg-cover bg-[position:center_center]" style="background-image: url('{{ get_asset_url('/precious-cargo/assets/images/footer-bg.png') }}');">
+  <div class=" flex text-center justify-center mb-12">
+    <img src="{{ get_asset_url('//assets/images/Logo-stamp.svg') }}" alt="">
+  </div>
+  <div class="max-w-4xl mx-auto px-4 text-sm grid gap-8 md:grid-cols-3">
+    <div class="text-base"> 
+      <nav>
+        <ul>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">About Us</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Email Us</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Blog</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Legal</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="text-base"> 
+      <nav>
+        <ul>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Water Cremation</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Euthanasia</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Pre-planning</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Pet-loss support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="text-base"> 
+      <nav>
+        <ul>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">Honor Fund</a></li>
+          <li class="mt-2"><a href="#" class="hover:underline underline-offset-4">ADA Compliance</a></li>
+        </ul>
+      </nav>
+    </div>
+        <div class="flex justify-center space-x-4 text-center md:col-span-3 mt-8">
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_148_37522)"><path d="M19.625 3.87553C16.021 3.62953 7.99401 3.63053 4.39501 3.87553C0.49801 4.14153 0.0390098 6.49553 0.0100098 12.6915C0.0390098 18.8765 0.49401 21.2405 4.39501 21.5075C7.99501 21.7525 16.021 21.7535 19.625 21.5075C23.522 21.2415 23.981 18.8875 24.01 12.6915C23.981 6.50653 23.526 4.14253 19.625 3.87553ZM9.01001 16.6915V8.69153L17.01 12.6845L9.01001 16.6915Z" fill="currentColor"/></g><defs><clipPath id="clip0_148_37522"><rect width="24" height="24" fill="white" transform="translate(0.0100098 0.691406)"/></clipPath></defs></svg>
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14.2837 10.8549L23.2123 0.691406H21.0972L13.3413 9.51445L7.15126 0.691406H0.0100098L9.37261 14.0347L0.0100098 24.6914H2.12505L10.3102 15.372L16.8488 24.6914H23.99M2.88841 2.2533H6.1377L21.0956 23.2062H17.8455" fill="#B8C4C1"/></svg>
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_148_37526)"><path d="M11.99 2.85441C15.194 2.85441 15.574 2.86641 16.84 2.92441C20.092 3.07241 21.611 4.61541 21.759 7.84341C21.817 9.10841 21.828 9.48841 21.828 12.6924C21.828 15.8974 21.816 16.2764 21.759 17.5414C21.61 20.7664 20.095 22.3124 16.84 22.4604C15.574 22.5184 15.196 22.5304 11.99 22.5304C8.78599 22.5304 8.40599 22.5184 7.14099 22.4604C3.88099 22.3114 2.36999 20.7614 2.22199 17.5404C2.16399 16.2754 2.15199 15.8964 2.15199 12.6914C2.15199 9.48741 2.16499 9.10841 2.22199 7.84241C2.37099 4.61541 3.88599 3.07141 7.14099 2.92341C8.40699 2.86641 8.78599 2.85441 11.99 2.85441ZM11.99 0.691406C8.73099 0.691406 8.32299 0.705406 7.04299 0.763406C2.68499 0.963406 0.26299 3.38141 0.0629902 7.74341C0.00399023 9.02441 -0.0100098 9.43241 -0.0100098 12.6914C-0.0100098 15.9504 0.00399023 16.3594 0.0619902 17.6394C0.26199 21.9974 2.67999 24.4194 7.04199 24.6194C8.32299 24.6774 8.73099 24.6914 11.99 24.6914C15.249 24.6914 15.658 24.6774 16.938 24.6194C21.292 24.4194 23.72 22.0014 23.917 17.6394C23.976 16.3594 23.99 15.9504 23.99 12.6914C23.99 9.43241 23.976 9.02441 23.918 7.74441C23.722 3.39041 21.301 0.964406 16.939 0.764406C15.658 0.705406 15.249 0.691406 11.99 0.691406ZM11.99 6.52941C8.58699 6.52941 5.82799 9.28841 5.82799 12.6914C5.82799 16.0944 8.58699 18.8544 11.99 18.8544C15.393 18.8544 18.152 16.0954 18.152 12.6914C18.152 9.28841 15.393 6.52941 11.99 6.52941ZM11.99 16.6914C9.78099 16.6914 7.98999 14.9014 7.98999 12.6914C7.98999 10.4824 9.78099 8.69141 11.99 8.69141C14.199 8.69141 15.99 10.4824 15.99 12.6914C15.99 14.9014 14.199 16.6914 11.99 16.6914ZM18.396 4.84641C17.6 4.84641 16.955 5.49141 16.955 6.28641C16.955 7.08141 17.6 7.72641 18.396 7.72641C19.191 7.72641 19.835 7.08141 19.835 6.28641C19.835 5.49141 19.191 4.84641 18.396 4.84641Z" fill="#B8C4C1"/></g><defs><clipPath id="clip0_148_37526"><rect width="24" height="24" fill="white" transform="translate(-0.0100098 0.691406)"/></clipPath></defs></svg>
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_148_37528)"><path d="M18.99 0.691406H4.98999C2.22899 0.691406 -0.0100098 2.93041 -0.0100098 5.69141V19.6914C-0.0100098 22.4524 2.22899 24.6914 4.98999 24.6914H18.99C21.752 24.6914 23.99 22.4524 23.99 19.6914V5.69141C23.99 2.93041 21.752 0.691406 18.99 0.691406ZM7.98999 19.6914H4.98999V8.69141H7.98999V19.6914ZM6.48999 7.42341C5.52399 7.42341 4.73999 6.63341 4.73999 5.65941C4.73999 4.68541 5.52399 3.89541 6.48999 3.89541C7.45599 3.89541 8.23999 4.68541 8.23999 5.65941C8.23999 6.63341 7.45699 7.42341 6.48999 7.42341ZM19.99 19.6914H16.99V14.0874C16.99 10.7194 12.99 10.9744 12.99 14.0874V19.6914H9.98999V8.69141H12.99V10.4564C14.386 7.87041 19.99 7.67941 19.99 12.9324V19.6914Z" fill="#B8C4C1"/></g><defs><clipPath id="clip0_148_37528"><rect width="24" height="24" fill="white" transform="translate(-0.0100098 0.691406)"/></clipPath></defs></svg>
+    </div>
+    <div class="md:col-span-3 mt-8">
+      <p class="text-base">Navigate your pet’s final chapter with clarity, compassion, and choice</p>
+      <p class="text-sm mt-12">717 Mateo Street, Los Angeles | 323-515-1234</p>
+      <p class="text-sm mt-4"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Honor Fund</a></p>
+      <p class="text-sm mt-4">© 2025 Honor Pet | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.25,
+    spaceBetween: 20,
+    loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  function switchTab(tabId) {
+    // Hide all tab contents
+    document.querySelectorAll('[data-tab]').forEach(el => el.classList.add('hidden'));
+
+    // Update all tab buttons to inactive state
+    document.querySelectorAll('[data-tab-button]').forEach(el => {
+      el.classList.remove('bg-blue', 'text-white');
+      el.classList.add('bg-blue-300', 'text-blue');
+    });
+
+    // Show the selected tab
+    document.getElementById(tabId).classList.remove('hidden');
+
+    // Set the clicked tab button to active state
+    const activeButton = document.querySelector(`[data-tab-button="${tabId}"]`);
+    activeButton.classList.remove('bg-blue-300', 'text-blue');
+    activeButton.classList.add('bg-blue', 'text-white');
+  }
+</script>
+
+
+
+</body>
+</html>

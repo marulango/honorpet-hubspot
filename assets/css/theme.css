@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --font-heading: 'Batusa', Georgia, serif;
+  --font-body: Helvetica, sans-serif;
+  --color-blue: #1F2C2F;
+  --color-plum: #4C3C46;
+  --color-taupe: #F4F3EC;
+  --color-black: #2B2B2B;
+  --color-moss: #647941;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.primary-button {
+  @apply rounded-full border uppercase tracking-wider bg-moss-300 border-moss-300 text-black transition-all ease-in duration-200 hover:text-moss hover:border-moss hover:shadow-md;
+}
+
+.secondary-button {
+  @apply rounded-full border uppercase tracking-wider bg-transparent border-blue text-black transition-all ease-in duration-200 hover:bg-blue-300 hover:text-blue-600 hover:border-blue-600 hover:shadow-md;
+}
+
+.tertiary-button {
+  @apply hover:bg-blue-300 border-b-2 border-white hover:border-black;
+}
+
+.header-links {
+  @apply uppercase tracking-wider text-blue border-b-2 border-white hover:font-bold hover:border-blue;
+}
+
+.text-link {
+  @apply font-bold;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-blue-600 hover:bg-blue hover:shadow-md;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue; 
+}
+
+.swiper {
+  @apply transition-all ease-in duration-200 py-12
+}
+
+.swiper-wrapper {
+  @apply transition-all ease-in duration-200
+}
+
+.swiper-button-prev, .swiper-button-next {
+  @apply transition-all ease-in duration-200 hover:text-blue-600;
+}

@@ -1,0 +1,65 @@
+{
+  "label": "Precious Cargo",
+  "screenshot": "./assets/images/theme-preview.png",
+  "author": {
+    "name": "Maru Lango",
+    "email": "your@email.com"
+  },
+  "css_assets": [
+    "./assets/css/theme.css"
+  ],
+  "js_assets": [
+    "./assets/js/theme.js"
+  ],
+  "base_templates": {
+    "global_partial": "./partials/base.html"
+  },
+  "fields": [
+    {
+      "name": "font_heading",
+      "label": "Heading Font",
+      "type": "font",
+      "default": {
+        "font": "Georgia",
+        "fallback": "serif",
+        "variants": [
+          {
+            "fontStyle": "normal",
+            "fontWeight": "400"
+          },
+          {
+            "fontStyle": "italic",
+            "fontWeight": "400"
+          }
+        ]
+      }
+    },
+    {
+      "name": "font_body",
+      "label": "Body Font",
+      "type": "font",
+      "default": {
+        "font": "Helvetica",
+        "fallback": "sans-serif",
+        "variants": [
+          {
+            "fontStyle": "normal",
+            "fontWeight": "400"
+          }
+        ]
+      }
+    },
+    {
+      "name": "primary_color",
+      "label": "Primary Color",
+      "type": "color",
+      "default": "#0f3d3e"
+    },
+    {
+      "name": "secondary_color",
+      "label": "Secondary Color",
+      "type": "color",
+      "default": "#f7f6f2"
+    }
+  ]
+}
